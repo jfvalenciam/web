@@ -1,0 +1,79 @@
+<!--Desarrollado Por Juan Felipe Valencia Murillo.-->
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="author" content="Juan Felipe Valencia Murillo">
+  <meta name="copyright" content="Juan Felipe Valencia Murillo">
+  <meta name="description" content="Juan Felipe Valencia Murillo">
+  <meta name="keywords" content="Juan Felipe Valencia Murillo, proes">
+  <meta name="robots" content="Index, Follow">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0"/>
+  <title>Acerca de Juan Felipe Valencia Murillo</title>
+  <link rel="icon" type="image/png" href="recursos/proes/proes-logo-transparente.png"/>
+  <link rel="stylesheet" href="css/fontawesome-5.4.1.min.css"/>
+  <link rel="stylesheet" href="css/principal.css"/>
+  <link rel="stylesheet" href="css/modal.css"/>
+</head>
+
+<body>
+
+<div id="jfvalenciam">
+  <encabezado></encabezado>
+  <menu-izquierdo></menu-izquierdo>
+  <div class="contenido">
+    <div class="regilla-contenedora">
+      <div class="contenido-regilla">
+        <center>
+          <img src="recursos/perfil/foto-perfil.jpg" onclick="abrirModal('foto-perfil')" class="foto-perfil"/>
+          <div class="titulo-pagina">Juan Felipe Valencia Murillo</div>
+        </center> 
+        <div class="hr"></div>
+        <p>
+          Hola, mi nombre es Juan Felipe Valencia Murillo, nací en la ciudad de 
+          Santiago de Cali (Colombia) el 13 de enero de 1998.
+        </p>
+        <p>
+          Soy apasionado por el desarrollo de software, a lo largo de mi carrera, 
+          he sentido la necesidad de escribir código en español ya que la mayoría de lenguajes de programación 
+          están escritos en inglés. De ahí nació la idea de desarrollar un ORM el cual me permitiera interactuar 
+          con los datos de la base de datos accediendo a métodos escritos en español.
+        </p>
+        <p>
+          El 13 de septiembre de 2018 inicié el desarrollo del ORM <em>PIPE</em> y posteriormente 
+          el de la plataforma <em>PROES - Programación en Español</em> siendo esta 
+          la puerta de presentación del ORM <em>PIPE</em> y de los futuros desarrollos.
+        </p>
+        <p>
+          Espero que esta plataforma sea útil para ti y te permita escribir código de forma rápida y en español.
+        </p>
+      </div>
+    </div>
+  </div>
+  <pie-pagina></pie-pagina>
+  <div id="foto-perfil" class="modal-imagen">
+    <div onclick="cerrarModal('foto-perfil')" class="cerrar-modal-imagen">&times;</div>
+    <center><img src="recursos/perfil/foto-perfil.jpg" class="imagen-modal"/></center>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/vue-2.5.16.min.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="componentes/encabezado.js"></script>
+<script type="text/javascript" src="componentes/menu-izquierdo.js"></script>
+<script type="text/javascript" src="componentes/pie-pagina.js"></script>
+
+<script type="text/javascript">
+
+new Vue({
+  el:'#jfvalenciam'
+});
+
+</script>
+
+</body>
+
+</html>
