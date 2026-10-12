@@ -1,80 +1,243 @@
-<!--Desarrollado Por Juan Felipe Valencia Murillo.-->
 <!DOCTYPE html>
-
-<html lang="es">
+<html lang="es" data-theme="light">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="author" content="Juan Felipe Valencia Murillo">
   <meta name="copyright" content="Juan Felipe Valencia Murillo">
   <meta name="description" content="Juan Felipe Valencia Murillo">
   <meta name="keywords" content="Juan Felipe Valencia Murillo, proes">
   <meta name="robots" content="Index, Follow">
-  <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
-  <title>Acerca de Juan Felipe Valencia Murillo</title>
-  <link rel="icon" type="image/png" href="recursos/proes/proes-logo-transparente.png" />
-  <link rel="stylesheet" href="css/fontawesome-5.4.1.min.css" />
-  <link rel="stylesheet" href="css/principal.css" />
-  <link rel="stylesheet" href="css/modal.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Felipe Valencia - Desarrollador de Software & Creador de PROES</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/proes-isotipo-transparente.svg">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Fuentes Google: Space Grotesk e Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
-  <div id="jfvalenciam">
-    <encabezado></encabezado>
-    <menu-izquierdo></menu-izquierdo>
-    <div class="contenido">
-      <div class="regilla-contenedora">
-        <div class="contenido-regilla">
-          <center>
-            <img src="recursos/perfil/foto-perfil-cuadrada.jpg" onclick="abrirModal('foto-perfil')" class="foto-perfil" />
-            <div class="titulo-pagina">Juan Felipe Valencia Murillo</div>
-          </center>
-          <div class="hr"></div>
-          <p>
-            Hola, mi nombre es Juan Felipe Valencia Murillo, nací en la ciudad de
-            Santiago de Cali (Colombia) el 13 de enero de 1998.
-          </p>
-          <p>
-            Soy apasionado por el desarrollo de software, a lo largo de mi carrera,
-            he sentido la necesidad de escribir código en español ya que la mayoría de lenguajes de programación
-            están escritos en inglés. De ahí nació la idea de desarrollar un ORM el cual me permitiera interactuar
-            con los datos de la base de datos accediendo a métodos escritos en español.
-          </p>
-          <p>
-            El 13 de septiembre de 2018 inicié el desarrollo del ORM <em>PIPE</em> y posteriormente
-            el de la plataforma <em>PROES - Programación en Español</em> siendo esta
-            la puerta de presentación del ORM <em>PIPE</em> y de los futuros desarrollos.
-          </p>
-          <p>
-            Espero que esta plataforma sea útil para ti y te permita escribir código de forma rápida y en español.
-          </p>
-          <div style="margin-bottom: 10%;"></div>
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main class="main-container">
+
+    <!-- BOTÓN TEMA CON SOLO ICONO SVG (LUNA / SOL) -->
+    <div class="top-bar">
+      <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Cambiar tema">
+        <!-- Icono Sol (Modo Oscuro) -->
+        <svg id="sunIcon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+        <!-- Icono Luna (Modo Claro) -->
+        <svg id="moonIcon" viewBox="0 0 24 24" style="display: none;">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- ENCABEZADO Y PERFIL -->
+    <header>
+      <div class="profile-header">
+        <img src="assets/images/perfil.jpg" alt="Juan Felipe Valencia" class="profile-photo"
+          onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'110\' height=\'110\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23C3C3C3\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg>';">
+        <div>
+          <h1>Juan Felipe Valencia</h1>
+          <p class="subtitle">Desarrollador de Software & Creador de <a href="https://proes.io" target="_blank"
+              rel="noopener" class="link-accent">PROES</a></p>
+
+          <!-- REDES SOCIALES (CADA UNA CON CONTORNO) -->
+          <div class="social-nav">
+            <!-- LinkedIn -->
+            <a href="https://github.com/jfvalenciam" target="_blank" rel="noopener" class="social-link" title="LinkedIn"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/jfvalenciam" target="_blank" rel="noopener" class="social-link"
+              title="LinkedIn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+            </a>
+
+            <!-- X (Twitter) -->
+            <a href="https://x.com/jfvalenciam" target="_blank" rel="noopener" class="social-link" title="X (Twitter)"
+              aria-label="X">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/jfvalenciamu" target="_blank" rel="noopener" class="social-link"
+              title="Instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://facebook.com/jfvalenciam" target="_blank" rel="noopener" class="social-link"
+              title="Facebook" aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <pie-pagina></pie-pagina>
-    <div id="foto-perfil" class="modal-imagen">
-      <div onclick="cerrarModal('foto-perfil')" class="cerrar-modal-imagen">&times;</div>
-      <center><img src="recursos/perfil/foto-perfil-rectangular.jpg" class="imagen-modal" /></center>
-    </div>
-  </div>
+    </header>
 
-  <script type="text/javascript" src="js/vue-2.5.16.min.js"></script>
-  <script type="text/javascript" src="js/config.js"></script>
-  <script type="text/javascript" src="js/util.js"></script>
-  <script type="text/javascript" src="componentes/encabezado.js"></script>
-  <script type="text/javascript" src="componentes/menu-izquierdo.js"></script>
-  <script type="text/javascript" src="componentes/pie-pagina.js"></script>
+    <!-- SOBRE MÍ -->
+    <section>
+      <h2>Sobre Mí</h2>
+      <p>
+        Desarrollador de software nacido de Cali, Colombia, especializado en la creación de soluciones tecnológicas para
+        la comunidad hispanohablante. Mi trayectoria se ha centrado en optimizar la accesibilidad al desarrollo de
+        software en español, con este propósito, en septiembre de 2018 inicié la arquitectura y creación de <span
+          class="highlight">PIPE</span>, un ORM diseñado para la gestión de bases de datos mediante sintaxis nativa en
+        español.
+      </p>
+      <p>
+        Posteriormente, fundé <span class="highlight">PROES - Programación en Español</span>, plataforma concebida para
+        potenciar el ecosistema de PIPE e impulsar el desarrollo de herramientas tecnológicas adaptadas a nuestro
+        idioma.
+      </p>
+    </section>
 
-  <script type="text/javascript">
+    <!-- PROYECTOS DESTACADOS -->
+    <section>
+      <h2>Proyectos Destacados</h2>
 
-    new Vue({
-      el: '#jfvalenciam'
-    });
+      <div class="projects-list">
+        <a href="https://proes.io" target="_blank" rel="noopener" class="project-item">
+          <div class="project-logo-wrapper">
+            <img src="assets/images/proes-isotipo.svg" alt="PROES Logo" class="project-logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-logo-fallback" style="display:none;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-title">PROES</span>
+              <span class="project-arrow">→</span>
+            </div>
+            <p class="project-desc">Plataforma y ecosistema de herramientas para la creación de código nativo en
+              español.</p>
+          </div>
+        </a>
 
-  </script>
+        <a href="https://pipe.proes.io" target="_blank" rel="noopener" class="project-item">
+          <div class="project-logo-wrapper">
+            <img src="assets/images/pipe-isotipo.svg" alt="PIPE Logo" class="project-logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-logo-fallback" style="display:none;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-title">PIPE</span>
+              <span class="project-arrow">→</span>
+            </div>
+            <p class="project-desc">Mapeador objeto-relacional para interactuar con bases de datos por medio de métodos
+              escritos en español.</p>
+          </div>
+        </a>
 
+        <a href="https://escrud.proes.io" target="_blank" rel="noopener" class="project-item">
+          <div class="project-logo-wrapper">
+            <img src="assets/images/escrud-isotipo.svg" alt="Escrud Logo" class="project-logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-logo-fallback" style="display:none;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-title">Escrud</span>
+              <span class="project-arrow">→</span>
+            </div>
+            <p class="project-desc">Herramienta que genera automáticamente interfaces CRUD para bases de datos por medio
+              de
+              métodos escritos en español.</p>
+          </div>
+        </a>
+
+        <a href="https://rutalo.proes.io" target="_blank" rel="noopener" class="project-item">
+          <div class="project-logo-wrapper">
+            <img src="assets/images/rutalo-isotipo.svg" alt="Rutalo Logo" class="project-logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-logo-fallback" style="display:none;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-title">Rutalo</span>
+              <span class="project-arrow">→</span>
+            </div>
+            <p class="project-desc">Enrutador que permite procesar URL limpias y amigables por medio de métodos escritos
+              en español.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© <span id="year"></span> Juan Felipe Valencia Murillo.</p>
+    </footer>
+
+  </main>
+
+  <!-- Botón "Volver arriba" -->
+  <button id="scrollToTopBtn" aria-label="Volver arriba" title="Volver arriba">
+    <!-- Ícono de flecha SVG elegante -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6" />
+    </svg>
+  </button>
+
+  <!-- JAVASCRIPT -->
+  <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 
 </html>
